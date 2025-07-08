@@ -1,0 +1,110 @@
+Lightweight USB Webcam Recorder with Audio — Simple, Efficient, and Fully Customizable
+
+
+TatorCam is a Lightweight bash based webcam recording utility designed for Linux systems using USB webcams and ALSA audio devices. It provides a simple terminal menu to:
+
+Select video and audio devices
+
+Configure output folder
+
+Set video resolution and bitrate
+
+Preview camera
+
+Monitor audio levels
+
+Start and stop recordings easily
+
+Save and load your settings automatically
+
+Features
+Minimal CPU usage with optimized ffmpeg settings (ultrafast preset, single-threaded encoding)
+
+Auto-creates and tracks output recording folders
+
+Supports custom audio and video device selection
+
+Adjustable video resolution and bitrate
+
+Real-time audio level monitoring
+
+Simple camera preview using ffplay
+
+Persistent configuration stored in ~/.camrecorder_config
+
+Human-friendly terminal menu interface
+
+Requirements
+Linux system
+
+USB webcam supported by v4l2 (Video4Linux2)
+
+ALSA-compatible microphone/audio device
+
+ffmpeg (with libx264 and aac support)
+
+arecord and aplay (ALSA utilities)
+
+ffplay (for preview)
+
+Install missing tools via your package manager, e.g.:
+
+bash
+Copy
+Edit
+sudo apt update
+sudo apt install ffmpeg alsa-utils
+Usage
+Download or clone the TatorCam script: camera.sh
+
+Make it executable:
+
+bash
+Copy
+Edit
+chmod +x camera.sh
+Run the script:
+
+bash
+Copy
+Edit
+./camera.sh
+Use the menu to:
+
+Select your audio and video devices
+
+Set output folder and video settings
+
+Preview your camera
+
+Start and stop recording
+
+Configuration File
+TatorCam saves your preferences automatically to:
+
+bash
+Copy
+Edit
+~/.camrecorder_config
+This file stores:
+
+Output folder path
+
+Audio device name
+
+Video device path
+
+Video resolution
+
+Video bitrate
+
+Tips for Best Performance
+Use a modest resolution like 640x480 or 1280x720 for low CPU load
+
+Set bitrate according to quality needs (e.g., 1000k is good for 720p)
+
+Avoid camera preview while recording to reduce CPU usage
+
+Use the ultrafast preset for encoding speed and low lag
+
+
